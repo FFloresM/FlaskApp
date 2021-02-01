@@ -1,9 +1,8 @@
-from flask import Flask, render_template, url_for, json
+from flask import Flask, render_template
 from flask_bootstrap import Bootstrap
 from flask_moment import Moment
 from forms.forms import NameForm
 from datetime import datetime
-import os
 
 
 app = Flask(__name__)
@@ -12,14 +11,17 @@ bootstrap = Bootstrap(app)
 moment = Moment(app)
 
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def index():
-	SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
-	json_url = os.path.join(SITE_ROOT, 'static/data', 'data.json')
-	data = json.load(open(json_url))
+	name = None
+	form = NameForm()
+	if form.validate_on_submit():
+		name = form.nombre.data
+		form.nombre.data=''
 	return render_template(
 				'index.html',
-				data=data
+				form=form,
+				name=name
 				)
 
 @app.route('/user/<name>')

@@ -1,0 +1,14 @@
+{
+	"usuario": {
+		"nombre": "Composite SpA",
+		"email": "usuario@compositespa.cl",
+		"direccion": "Ruta 160 345, Coronel"
+	},
+	"lanza": [
+		{
+		"codigo": 12345,
+		"modelo": "RPi-3b 1.0",
+		"serie": "L00000001"
+		}
+	]
+}
