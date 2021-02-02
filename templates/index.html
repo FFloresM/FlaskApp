@@ -1,26 +1,72 @@
 {% extends "base.html" %}
 {% block title %}
-	Flasky
+	Composite App Data
 {% endblock %}
 
 {% block page_content %}
 <div class="page-header">
-	<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h3 class="card-title">Datos Cliente</h3>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">Cras justo odio</li>
-    <li class="list-group-item">Dapibus ac facilisis in</li>
-    <li class="list-group-item">Vestibulum at eros</li>
-  </ul>
-  <div class="card-body">
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
-  </div>
+	<div class="row">
+		<div class="col-sm-6">
+			<div class="card">
+			 	<div class="card-body">
+			    	<h3 class="card-title"><b>Datos Cliente</b></h3>
+			  	</div>
+			  	<ul class="list-group list-group-flush">
+			    	<li class="list-group-item">Nombre: <br>
+			    		{{ data.usuario.nombre }}</li>
+			    	<li class="list-group-item">Email: <br>
+			    		{{ data.usuario.email }}</li>
+			    	<li class="list-group-item">Dirección: <br>
+			    		{{ data.usuario.direccion }}</li>
+			  	</ul>
+			  	<div class="card-body">
+			    	<a href="#" class="card-link">Mi empresa</a>
+		  		</div>
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<div class="card">
+		  		<div class="card-body">
+		    		<h3 class="card-title"><b>Datos Lanza</b></h3>
+		  		</div>
+		  		<ul class="list-group list-group-flush">
+		  			{% for lanza in data.lanza %}
+		    		<li class="list-group-item">Código: <br>
+		    			{{ lanza.codigo }}</li>
+		    		<li class="list-group-item">Modelo: <br>
+		    			{{ lanza.modelo }}</li>
+		    		<li class="list-group-item">Serie: <br>
+		    			{{ lanza.serie }}</li>
+		    		{% endfor %}
+		  		</ul>
+		  		<div class="card-body">
+		    		<a href="/registros" class="card-link">Registros</a>
+		  		</div>
+			</div>
+		</div>
+	</div>
 </div>
-	<p>Datos lanza {{ data.lanza }}</p>
-</div>
+
+<h3><b>Pilas</b></h3>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Predio</th>
+      <th scope="col">Fecha creación</th>
+      <th scope="col">Estado</th>
+    </tr>
+  </thead>
+  <tbody>
+  	{% for pila in data.pilas %}
+	    <tr>
+	      <th scope="row">{{pila.id}}</th>
+	      <td>{{pila.predio}}</td>
+	      <td>{{pila.fecha_creacion}}</td>
+	      <td>{{pila.estado}}</td>
+	    </tr>
+    {% endfor %}
+  </tbody>
+</table>
 
 {% endblock %}

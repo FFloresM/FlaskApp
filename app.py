@@ -26,6 +26,16 @@ def index():
 def user(name):
 	return render_template('user.html', name=name)
 
+@app.route('/registros')
+def registros():
+	SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
+	json_url = os.path.join(SITE_ROOT, 'static/data', 'registros.json')
+	data = json.load(open(json_url))
+	return render_template(
+				'registros.html',
+				data=data
+				)
+
 
 		
 

@@ -1,5 +1,6 @@
 {
 	"usuario": {
+		"id": 1,
 		"nombre": "Composite SpA",
 		"email": "usuario@compositespa.cl",
 		"direccion": "Ruta 160 345, Coronel"
@@ -10,5 +11,26 @@
 		"modelo": "RPi-3b 1.0",
 		"serie": "L00000001"
 		}
+	],
+	"pilas": [
+		{
+			"id": "A",
+			"predio": "345",
+			"fecha_creacion": "01/01/2020",
+			"estado": "Maduración"
+		},
+		{
+			"id": "B",
+			"predio": "345",
+			"fecha_creacion": "01/01/2020",
+			"estado": "Maduración"
+		},
+		{
+			"id": "C",
+			"predio": "345",
+			"fecha_creacion": "01/01/2020",
+			"estado": "Volteo"
+		}
+
 	]
 }
