@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}
+	Nueva Pila
+{% endblock %}
+
+{% block page_content %}
+<h3><b>Agregar Pila</b></h3>
+{{ nombre }}
+{{ wtf.quick_form(form) }}
+{% endblock %}

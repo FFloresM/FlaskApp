@@ -1,7 +1,7 @@
 from flask import Flask, render_template, url_for, json
 from flask_bootstrap import Bootstrap
 from flask_moment import Moment
-from forms.forms import NameForm
+from forms.forms import NameForm, NuevaPilaForm
 from datetime import datetime
 import os
 
@@ -36,7 +36,15 @@ def registros():
 				data=data
 				)
 
-
+@app.route('/nueva', methods=['GET', 'POST'])
+def nueva():
+	nombre = None
+	nuevaPilaForm = NuevaPilaForm()
+	if nuevaPilaForm.validate_on_submit():
+		nombre = nuevaPilaForm.nombre.data
+		#return url_for('/')
+		#volver a la página de incio
+	return render_template('nuevaPila.html', form=nuevaPilaForm)
 		
 
 

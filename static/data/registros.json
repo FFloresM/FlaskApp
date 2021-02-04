@@ -1,53 +1,110 @@
 {
-	"pila": "A",
-	"posicion": 12345,
-	"foto": "/path/to/file",
-	"lanza": "L00000001",
-	"registros": [
+	"pila": [
 		{
-			"fecha_creacion": "02/01/2020&09:00:00",
-			"temperatura": 30,
-			"humedad": 5
+			"id": "A",
+			"posicion": 12345,
+			"foto": "/path/to/file",
+			"lanza": "L00000001",
+			"registros": [
+				{
+					"fecha_creacion": "02/01/2020&09:00:00",
+					"temperatura": 30,
+					"humedad": 5
+				},
+				{
+					"fecha_creacion": "02/01/2020&12:00:00",
+					"temperatura": 31,
+					"humedad": 5
+				},
+				{
+					"fecha_creacion": "02/01/2020&15:00:00",
+					"temperatura": 35,
+					"humedad": 5
+				},
+				{
+					"fecha_creacion": "03/01/2020&09:00:00",
+					"temperatura": 36,
+					"humedad": 5
+				},
+				{
+					"fecha_creacion": "03/01/2020&12:00:00",
+					"temperatura": 37,
+					"humedad": 5
+				},
+				{
+					"fecha_creacion": "03/01/2020&15:00:00",
+					"temperatura": 39,
+					"humedad": 5
+				},
+				{
+					"fecha_creacion": "04/01/2020&09:00:00",
+					"temperatura": 40,
+					"humedad": 5
+				},
+				{
+					"fecha_creacion": "04/01/2020&12:00:00",
+					"temperatura": 42,
+					"humedad": 5
+				},
+				{
+					"fecha_creacion": "04/01/2020&15:00:00",
+					"temperatura": 44,
+					"humedad": 5
+				}
+			]
 		},
 		{
-			"fecha_creacion": "02/01/2020&12:00:00",
-			"temperatura": 31,
-			"humedad": 5
-		},
-		{
-			"fecha_creacion": "02/01/2020&15:00:00",
-			"temperatura": 35,
-			"humedad": 5
-		},
-		{
-			"fecha_creacion": "03/01/2020&09:00:00",
-			"temperatura": 36,
-			"humedad": 5
-		},
-		{
-			"fecha_creacion": "03/01/2020&12:00:00",
-			"temperatura": 37,
-			"humedad": 5
-		},
-		{
-			"fecha_creacion": "03/01/2020&15:00:00",
-			"temperatura": 39,
-			"humedad": 5
-		},
-		{
-			"fecha_creacion": "04/01/2020&09:00:00",
-			"temperatura": 40,
-			"humedad": 5
-		},
-		{
-			"fecha_creacion": "04/01/2020&12:00:00",
-			"temperatura": 42,
-			"humedad": 5
-		},
-		{
-			"fecha_creacion": "04/01/2020&15:00:00",
-			"temperatura": 44,
-			"humedad": 5
+			"id": "B",
+			"posicion": 12346,
+			"foto": "/path/to/file",
+			"lanza": "L00000001",
+			"registros": [
+				{
+					"fecha_creacion": "02/01/2020&09:00:00",
+					"temperatura": 30,
+					"humedad": 5
+				},
+				{
+					"fecha_creacion": "02/01/2020&12:00:00",
+					"temperatura": 31,
+					"humedad": 5
+				},
+				{
+					"fecha_creacion": "02/01/2020&15:00:00",
+					"temperatura": 35,
+					"humedad": 5
+				},
+				{
+					"fecha_creacion": "03/01/2020&09:00:00",
+					"temperatura": 36,
+					"humedad": 5
+				},
+				{
+					"fecha_creacion": "03/01/2020&12:00:00",
+					"temperatura": 37,
+					"humedad": 5
+				},
+				{
+					"fecha_creacion": "03/01/2020&15:00:00",
+					"temperatura": 39,
+					"humedad": 5
+				},
+				{
+					"fecha_creacion": "04/01/2020&09:00:00",
+					"temperatura": 40,
+					"humedad": 5
+				},
+				{
+					"fecha_creacion": "04/01/2020&12:00:00",
+					"temperatura": 42,
+					"humedad": 5
+				},
+				{
+					"fecha_creacion": "04/01/2020&15:00:00",
+					"temperatura": 50,
+					"humedad": 5
+				}
+			]
 		}
 	]
 
